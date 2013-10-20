@@ -4,8 +4,9 @@ Faderfox_DJ3.knob_right_lim = 10
 Faderfox_DJ3.knob_left_lim  = 117
 Faderfox_DJ3.volume_step = 0.2
 Faderfox_DJ3.mix_step = 0.1
-Faderfox_DJ3.button_press = 144
-Faderfox_DJ3.button_release = 128
+Faderfox_DJ3.button_press = 0x93
+Faderfox_DJ3.button_release = 0x83
+Faderfox_DJ3.shiftcue_press = 0xb3
 Faderfox_DJ3.seek_increment = 0.005
 Faderfox_DJ3.seek_increment_fine = 0.0001
 Faderfox_DJ3.switch_on = 0x7f
@@ -19,7 +20,7 @@ Faderfox_DJ3.loopIncrement = 4400;
 Faderfox_DJ3.scratch_intervalsPerRev = 64;
 
 /********************* Initialization ********************/
-Faderfox_DJ3.init = function(id){
+Faderfox_DJ3.init = function(id,debugging){
     engine.connectControl ( "[Channel1]", "bpm", "Faderfox_DJ3.nosync" );
     engine.connectControl ( "[Channel2]", "bpm", "Faderfox_DJ3.nosync" );
 }
@@ -217,7 +218,7 @@ Faderfox_DJ3.keylock_toggle = function ( channel, control, value, status, group 
     */
     var state = engine.getValue ( group, "keylock" );
 
-    if ( status == Faderfox_DJ3.button_press ) {
+    if ( status == Faderfox_DJ3.shiftcue_press & value==0x7F) {
         if ( state == 1 ) {
             engine.setValue ( group, "keylock", 0 );
         } else {

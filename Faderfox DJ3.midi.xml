@@ -1,7 +1,7 @@
-<MixxxMIDIPreset mixxxVersion="1.10.1+" schemaVersion="1">
+<MixxxMIDIPreset mixxxVersion="1.11.0+" schemaVersion="1">
     <controller id="Faderfox DJ3 MIDI 1">
         <scriptfiles>
-            <file functionprefix="Faderfox_DJ3" filename="Faderfox_DJ3_MIDI2.js"/>
+            <file functionprefix="Faderfox_DJ3" filename="Faderfox-DJ3-scripts.js"/>
         </scriptfiles>
         <controls>
             <control>
