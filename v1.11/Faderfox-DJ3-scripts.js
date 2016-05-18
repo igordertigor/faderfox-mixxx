@@ -15,7 +15,7 @@ Faderfox_DJ3.scratch_alpha = .125
 Faderfox_DJ3.scratch_beta  = Faderfox_DJ3.scratch_alpha/32.
 Faderfox_DJ3.isScratching = { "[Channel1]": false, "[Channel2]": false }
 Faderfox_DJ3.default_loop_size = 1;
-Faderfox_DJ3.loop_size = {"[Channel1]": 1, "[Channel2]": 2}
+Faderfox_DJ3.loop_size = {"[Channel1]": 1, "[Channel2]": 1}
 Faderfox_DJ3.loopIncrement = 4400;
 Faderfox_DJ3.scratch_intervalsPerRev = 64;
 
